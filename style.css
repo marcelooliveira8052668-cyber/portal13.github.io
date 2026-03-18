@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f2027;
+  color: white;
+}
+
+/* BANNER */
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.banner::after {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: rgb(241, 219, 16);
+  font-weight: bold;
+}
+
+/* BLOCOS */
+.bloco {
+  padding: 40px;
+  text-align: center;
+}
+
+/* TÍTULOS */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  width: 250px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  padding: 15px;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #2a2a2a;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: 10px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+.tempo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.temperatura {
+  width: 250px;
+  position: fixed;
+  right: 20px;
+  top: 100px;
+}
+
+.clima-card {
+  position: fixed;   /* 🔥 isso tira do fluxo da página */
+  top: 20px;
+  right: 20px;
+
+  width: 240px;
+  padding: 20px;
+
+  background: linear-gradient(135deg, #0a192f, #112240);
+  color: white;
+
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+  z-index: 9999; /* 🔥 garante que fica na frente do banner */
+}
+
+/* topo */
+.topo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* parte principal */
+.principal {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.icone {
+  font-size: 50px;
+  margin-right: 15px;
+}
+
+.principal h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.principal span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* previsão dias */
+.dias {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.dia {
+  background: #334155;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  width: 60px;
+}
+
+.dia p {
+  margin-bottom: 5px;
+}
+
+.contato {
+  padding: 60px 20px;
+  background: #0a192f;
+  color: white;
+  text-align: center;
+}
+
+.container-contato {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+.form-contato button {
+  padding: 12px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-contato button:hover {
+  background: #0097a7;
+}
+
+.whatsapp-box a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.whatsapp-box a:hover {
+  background: #1ebe5d;
+}
+
+/* CAIXA DE CLIMA MODERNA */
+.clima-card {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  width: 240px;
+  padding: 20px;
+
+  background: linear-gradient(135deg, #0a192f, #112240);
+  color: white;
+
+  border-radius: 20px; /* 🔥 deixa bem redondo */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+  font-family: Arial, sans-serif;
+}
+
+/* TOPO */
+.topo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* PARTE PRINCIPAL */
+.principal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.icone {
+  font-size: 40px;
+}
+
+/* TEMPERATURA */
+.principal h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+/* DESCRIÇÃO */
+.principal p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* MÁX E MÍN */
+.principal span {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* DIAS */
+.dias {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.dia {
+  text-align: center;
+  font-size: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 8px;
+  border-radius: 10px;
+  width: 50px;
+}
+
+.dia p {
+  margin: 0;
+}
+
+.dia span {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.clima-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.video-card {
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 170px;
+  border-radius: 15px;
+}
